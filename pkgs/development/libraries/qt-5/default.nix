@@ -176,11 +176,7 @@ stdenv.mkDerivation rec {
     homepage = http://qt-project.org;
     description = "A cross-platform application framework for C++";
     license = "GPL/LGPL";
-<<<<<<< HEAD
-    maintainers = [ maintainers.bbenoist maintainers.qknight ];
-=======
     maintainers = with maintainers; [ bbenoist qknight ttuegel ];
->>>>>>> master
     platforms = platforms.linux;
   };
 }
