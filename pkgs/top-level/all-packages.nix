@@ -10598,7 +10598,6 @@ let
 
   qtractor = callPackage ../applications/audio/qtractor { };
 
-<<<<<<< HEAD
   quassel_qt5 = callPackage ../applications/networking/irc/quassel {
     monolithic = true;
     daemon = false;
@@ -10609,9 +10608,8 @@ let
     dconf = gnome3.dconf;
     tag = "-qt5";
   };
-=======
+
   quirc = callPackage ../tools/graphics/quirc {};
->>>>>>> master
 
   quodlibet = callPackage ../applications/audio/quodlibet {
     inherit (pythonPackages) mutagen;
