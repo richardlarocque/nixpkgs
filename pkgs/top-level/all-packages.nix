@@ -5251,6 +5251,8 @@ let
 
   libgit2 = callPackage ../development/libraries/git2 { };
 
+  secp256k1 = callPackage ../development/libraries/secp256k1 { };
+
   glew = callPackage ../development/libraries/glew { };
 
   glfw = glfw3;
