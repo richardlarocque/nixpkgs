@@ -6565,27 +6565,6 @@ let
     propagatedBuildInputs = with self; [ unittest2 six ];
   };
 
-  loxodo = buildPythonPackage {
-    name = "loxodo-0.20150124";
-    disabled = isPy3k;
-
-    src = pkgs.fetchgit {
-      url = "https://github.com/sommer/loxodo.git";
-      rev = "6c56efb4511fd6f645ad0f8eb3deafc8071c5795";
-      sha256 = "02whmv4am8cz401rplplqzbipkyf0wd69z43sd3yw05rh7f3xbs2";
-    };
-
-    propagatedBuildInputs = with self; [ wxPython modules.readline ];
-    postInstall = "mv $out/bin/loxodo.py $out/bin/loxodo";
-
-    meta = with stdenv.lib; {
-      description = "A Password Safe V3 compatible password vault";
-      homepage = http://www.christoph-sommer.de/loxodo/;
-      license = licenses.gpl2Plus;
-      platforms = platforms.linux;
-    };
-  };
-
   lxml = buildPythonPackage ( rec {
     name = "lxml-3.3.6";
 
@@ -9079,12 +9058,12 @@ let
     version = "1.5.3";
     # FAIL:test_generate_entry and test_time
     # both tests fail due to time issue that doesn't seem to matter in practice
-    doCheck = false; 
+    doCheck = false;
     src = pkgs.fetchurl {
       url = "https://github.com/pyblosxom/pyblosxom/archive/v${version}.tar.gz";
       sha256 = "0de9a7418f4e6d1c45acecf1e77f61c8f96f036ce034493ac67124626fd0d885";
     };
-  
+
     propagatedBuildInputs = with self; [ pygments markdown ];
 
     meta = with stdenv.lib; {
